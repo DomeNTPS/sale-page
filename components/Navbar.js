@@ -1,6 +1,5 @@
 import React from 'react'
 import Button from "@material-ui/core/Button";
-import styled from "styled-components";
 import Link from "next/link";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
@@ -48,20 +47,4 @@ function Navbar() {
 
 export default Navbar
 
-
-
-const NavDiv = styled.div`
-  /* position: absolute; */
-  width: 100%;
-  height: 72px;
-  left: 0px;
-  top: 0px;
-  display: flex;
-
-  background: #ffffff;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-
-  justify-items: flex-end;
-  
-`;
 
