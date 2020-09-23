@@ -1,0 +1,12 @@
+.navdiv {
+    width: 100%;
+    height: 72px;
+    left: 0px;
+    top: 0px;
+    display: flex;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+
+    justify-items: flex-end;
+}

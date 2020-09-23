@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import BuyButton from '../components/BuyButton'
 
 
+
 function detail() {
     return (
       <div>

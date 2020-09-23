@@ -1,7 +1,12 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import styled from "styled-components";
+import { Slide } from "react-slideshow-image";
 
+
+
+const slideImages = [
+  "../public/246x0w.png",
+  "../public/pepefrog.png"
+];
 
 
 export default function Home() {
@@ -10,7 +15,9 @@ export default function Home() {
       <Head>
         <title>Sale page</title>
       </Head>
-      <img src="/vercel.svg" alt="" height={400} />
+      <div className="image">
+        <img src="/M0.png" alt="" style={{ width: 800 }} />
+      </div>
       <div className="M0">M0 Series</div>
       <div>เครื่องตรวจสอบคุณภาพข้าวด้วยเทคโนโลยีปัญญาประดิษฐ์ (AI)</div>
       <div>ใช้เวลาตรวจสอบเพียง 1 นาที</div>
@@ -19,6 +26,7 @@ export default function Home() {
         ราคาเริ่ม&nbsp;&nbsp;60,000 บาท / ปีแรก <br /> &nbsp; &nbsp; &nbsp;
         &nbsp; &nbsp; &nbsp; &nbsp; 30,000 บาท / ปีแรก
       </div>
+      
     </div>
   );
 }
