@@ -2,7 +2,16 @@
     justify-items: center;
 }
 
+.container2 {
+    height: 2200px;
+}
+
 .M0 {
+    justify-content: center;
+    align-content : center;
+}
+
+.M0-head {
     margin-top: 70px;
     color: #339a65;
     font-style: normal;
@@ -11,6 +20,50 @@
     line-height: 88px;
     /* justify-items: center; */
     margin-left: 43%;
+}
+
+.M0-detail {
+    margin-top: 70px;
+    /* color: #339a65; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 42px;
+    /* justify-items: center; */
+    margin-left: 33%;
+}
+
+.M0-detail-time {
+    margin-top: 70px;
+    /* color: #339a65; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 42px;
+    /* justify-items: center; */
+    margin-left: 43%;
+}
+
+.M0-detail-acc {
+    margin-top: 70px;
+    /* color: #339af5; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 42px;
+    /* justify-items: center; */
+    margin-left: 47%;
+}
+
+.M0-detail-price {
+    margin-top: 70px;
+    /* color: #339a65; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 42px;
+    /* justify-items: center; */
+    margin-left: 42%;
 }
 
 .each-fade {

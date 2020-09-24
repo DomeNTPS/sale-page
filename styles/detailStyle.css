@@ -10,6 +10,7 @@
 .detailall {
     justify-content: center;
     height: 1300px;
+    width: 100%;
 }
 
 .detail-head {
@@ -82,4 +83,11 @@
      line-height: 30px;
 
      color: #1A1B1F;
+}
+
+.detail-contactbutton {
+    margin-top: 60px;
+    margin-left: 100px;
+
+    border-radius: 6px;
 }

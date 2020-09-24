@@ -3,11 +3,12 @@ import NativeSelect from "@material-ui/core/NativeSelect";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import InputBase from "@material-ui/core/InputBase";
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import NumberFormat from "react-number-format";
+import MaskedInput from "react-text-mask";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   selectEmpty: {
@@ -52,22 +53,82 @@ const ColorInput = withStyles((theme) => ({
   },
 }))(InputBase);
 
+function TextMaskCustom(props) {
+  const { inputRef, ...other } = props;
+
+  return (
+    <MaskedInput
+      {...other}
+      ref={(ref) => {
+        inputRef(ref ? ref.inputElement : null);
+      }}
+      mask={[
+        /[1-9]/,
+        /\d/,
+        /\d/,
+        " ",
+        /\d/,
+        /\d/,
+        /\d/,
+        "-",
+        /\d/,
+        /\d/,
+        /\d/,
+        /\d/,
+      ]}
+      placeholderChar={"\u2000"}
+      showMask
+    />
+  );
+}
+
+function NumberFormatCustom(props) {
+  const { inputRef, onChange, ...other } = props;
+
+  return (
+    <NumberFormat
+      {...other}
+      getInputRef={inputRef}
+      onValueChange={(values) => {
+        onChange({
+          target: {
+            name: props.name,
+            value: values.value,
+          },
+        });
+      }}
+      isNumericString
+      format="###-###-####"
+    />
+  );
+}
+
+NumberFormatCustom.propTypes = {
+  inputRef: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
+
+TextMaskCustom.propTypes = {
+  inputRef: PropTypes.func.isRequired,
+};
+
 
 function buy() {
     const classes = useStyles();
     const [ppackage, setPackage] = React.useState({
       package: "",
     });
-    const handleChange = (event) => {
+    const handleChangePackage = (event) => {
       const name = event.target.name;
       setPackage({
         ...ppackage,
         [name]: event.target.value,
       });
     };
-    const [value, setValue] = React.useState("female");
+    const [value, setValue] = React.useState("Yes");
 
-    const handleChangee = (event) => {
+    const handleChange = (event) => {
       setValue(event.target.value);
     };
 
@@ -78,7 +139,7 @@ function buy() {
           <div className="buy-input">
             <div>ชื่อ (Name)</div>
             <TextField
-              id="filled-basic"
+              id="filled-name"
               placeholder="ชื่อ"
               variant="filled"
               style={{ width: 400, marginTop: 20 }}
@@ -88,10 +149,11 @@ function buy() {
           <div className="buy-input">
             <div style={{ marginLeft: 270 }}>นามสกุล (Surname)</div>
             <TextField
-              id="filled-basic"
+              id="filled-surname"
               placeholder="นามสกุล"
               variant="filled"
               style={{ marginLeft: 270, width: 400, marginTop: 20 }}
+              className={classes.root}
             />
           </div>
         </div>
@@ -99,19 +161,24 @@ function buy() {
           <div className="buy-input">
             <div>เบอร์โทรศัพท์มือถือ (Phone)</div>
             <TextField
-              id="filled-basic"
+              id="filled-phone"
               placeholder="000-000-0000"
               variant="filled"
               style={{ width: 400, marginTop: 20 }}
+              className={classes.root}
+              InputProps={{
+                inputComponent: NumberFormatCustom,
+              }}
             />
           </div>
           <div className="buy-input">
             <div style={{ marginLeft: 270 }}>อีเมล (E-mail)</div>
             <TextField
-              id="filled-basic"
+              id="filled-email"
               placeholder="อีเมล"
               variant="filled"
               style={{ marginLeft: 270, width: 400, marginTop: 20 }}
+              className={classes.root}
             />
           </div>
         </div>
@@ -120,7 +187,7 @@ function buy() {
             <div>แพ็คเกจ (Package)</div>
             <NativeSelect
               value={ppackage.package}
-              onChange={handleChange}
+              onChange={handleChangePackage}
               style={{ width: 400, height: 50, marginTop: 20 }}
               name="package"
               className={classes.selectEmpty}
@@ -138,24 +205,39 @@ function buy() {
           <div className="buy-input">
             <div style={{ marginLeft: 270 }}>ราคา (Price)</div>
             <TextField
-              id="filled-basic"
+              id="filled-price"
               placeholder="ราคา"
               variant="filled"
               style={{ marginLeft: 270, width: 400, marginTop: 20 }}
+              className={classes.root}
             />
           </div>
         </div>
         <div className="buy-from-sub">
           <div className="buy-input">
-            <div>Add Sizing</div>
+            <div style={{ width: 400 }}>Add Sizing</div>
+            <RadioGroup
+              aria-label="gender"
+              name="gender1"
+              value={value}
+              onChange={handleChange}
+            >
+              <FormControlLabel
+                value="female"
+                control={<Radio />}
+                label="Yes"
+              />
+              <FormControlLabel value="male" control={<Radio />} label="No" />
+            </RadioGroup>
           </div>
           <div className="buy-input">
-            <div style={{ marginLeft: 270 }}>อีเมล (E-mail)</div>
+            <div style={{ marginLeft: 270 }}>ฟังก์ชั่น (Function)</div>
             <TextField
-              id="filled-basic"
-              placeholder="อีเมล"
+              id="filled-function"
+              placeholder="30,000"
               variant="filled"
               style={{ marginLeft: 270, width: 400, marginTop: 20 }}
+              className={classes.root}
             />
           </div>
         </div>

@@ -1,51 +1,47 @@
 import React from 'react'
 import Button from "@material-ui/core/Button";
 import Link from "next/link";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import {
+  createMuiTheme,
+  ThemeProvider,
+  makeStyles,
+  withStyles,
+} from "@material-ui/core/styles";
+import styled from "styled-components";
 
+const useStyles = makeStyles((theme) => ({
+  nav: {
+    background: "#fff",
+    color: "#339a65",
+    borderRadius: 3,
+    border: 0,
+    fontSize: 20,
+    padding: "20px 30px",
+  },
+}));
 
 function Navbar() {
 
-  const theme = createMuiTheme({
-    overrides: {
-      // Style sheet name ⚛️
-      MuiButton: {
-        // Name of the rule
-        text: {
-          // Some CSS
-          background: "#fff",
-          color: "#339a65",
-          borderRadius: 3,
-          border: 0,
-          fontSize: 20,
-          padding: "0 30px",
-        },
-      },
-    },
-  });
-
+  const classes = useStyles();
     return (
       <div className="navdiv">
         <div className="navbar">
-          <ThemeProvider theme={theme}>
-            <Link href="/">
-              <Button>หน้าแรก</Button>
-            </Link>
-            <Link href="/detail">
-              <Button>รายละเอียด</Button>
-            </Link>
-            <Link href="/buy">
-              <Button>ซื้อสินค้า</Button>
-            </Link>
-            <Link href="/services">
-              <Button>บริการ</Button>
-            </Link>
-          </ThemeProvider>
+          <Link href="/">
+            <Button className={classes.nav}>หน้าแรก</Button>
+          </Link>
+          <Link href="/detail">
+            <Button className={classes.nav}>รายละเอียด</Button>
+          </Link>
+          <Link href="/buy">
+            <Button className={classes.nav}>ซื้อสินค้า</Button>
+          </Link>
+          <Link href="/services">
+            <Button className={classes.nav}>บริการ</Button>
+          </Link>
         </div>
       </div>
     );
 }
 
 export default Navbar
-
 

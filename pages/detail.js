@@ -1,22 +1,33 @@
 import React from 'react'
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import {
+  createMuiTheme,
+  ThemeProvider,
+  makeStyles,
+  withStyles,
+  styled,
+} from "@material-ui/core/styles";
 import Buybutton from '../components/BuyButton'
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
-
-
 
 
 function detail() {
    const [value, setValue] = React.useState("female");
 
+   const useStyles = makeStyles((theme) => ({
+     contactbutton: {
+       background: "#fff",
+       color: "#339a65",
+       borderRadius: "6px",
+       border: "2px solid #339a65",
+       fontSize: 20,
+       padding: "10px 55px",
+     },
+   }));
+
    const handleChange = (event) => {
      setValue(event.target.value);
    };
+   const classes = useStyles();
     return (
       <div className="detailall">
         <div className="detail-head">รายละเอียด</div>
@@ -33,8 +44,12 @@ function detail() {
           &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; กิโลกรัม
         </div>
         <div className="detail"></div>
-        <Buybutton />
-        
+        <div style={{ display: "flex" }}>
+          <Buybutton />
+          <div className="detail-contactbutton">
+            <Button className={classes.contactbutton}>ติดต่อเรา</Button>
+          </div>
+        </div>
       </div>
     );
 }
