@@ -25,8 +25,8 @@ function Navbar() {
   });
 
     return (
-      <>
-        <div className="navdiv">
+      <div className="navdiv">
+        <div className="navbar">
           <ThemeProvider theme={theme}>
             <Link href="/">
               <Button>หน้าแรก</Button>
@@ -42,7 +42,7 @@ function Navbar() {
             </Link>
           </ThemeProvider>
         </div>
-      </>
+      </div>
     );
 }
 

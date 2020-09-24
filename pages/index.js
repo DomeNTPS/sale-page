@@ -1,12 +1,10 @@
 import Head from 'next/head'
 import { Slide } from "react-slideshow-image";
+import { Fade } from "react-slideshow-image";
 
 
 
-const slideImages = [
-  "../public/246x0w.png",
-  "../public/pepefrog.png"
-];
+const fadeImages = ["/M0.png", "/M0.png"];
 
 
 export default function Home() {
@@ -15,8 +13,21 @@ export default function Home() {
       <Head>
         <title>Sale page</title>
       </Head>
-      <div className="image">
-        <img src="/M0.png" alt="" style={{ width: 800 }} />
+      <div className="slide-contain">
+        <Fade>
+          <div className="each-fade">
+            <div>
+              <img src={fadeImages[0]} />
+            </div>
+            <p>M0 Series</p>
+          </div>
+          <div className="each-fade">
+            <p>M0 series</p>
+            <div>
+              <img src={fadeImages[1]} />
+            </div>
+          </div>
+        </Fade>
       </div>
       <div className="M0">M0 Series</div>
       <div>เครื่องตรวจสอบคุณภาพข้าวด้วยเทคโนโลยีปัญญาประดิษฐ์ (AI)</div>
@@ -26,7 +37,6 @@ export default function Home() {
         ราคาเริ่ม&nbsp;&nbsp;60,000 บาท / ปีแรก <br /> &nbsp; &nbsp; &nbsp;
         &nbsp; &nbsp; &nbsp; &nbsp; 30,000 บาท / ปีแรก
       </div>
-      
     </div>
   );
 }

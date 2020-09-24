@@ -9,12 +9,15 @@ const theme = createMuiTheme({
       // Name of the rule
       text: {
         // Some CSS
-        background: "#339a65",
-        color: "#fff",
+        background: "#fff",
+        color: "#339a65",
         borderRadius: 3,
-        border: 0,
+        border: 5,
+        // borderColor: "#339a65",
         fontSize: 20,
         padding: "0 30px",
+        // width: 184,
+        // height: 56,
       },
     },
   },
@@ -22,9 +25,9 @@ const theme = createMuiTheme({
 
 function BuyButton() {
     return (
-      <div>
+      <div className="buybutton">
         <ThemeProvider theme={theme}>
-          <Button>hi</Button>
+          <Button>ซื้อสินค้า</Button>
         </ThemeProvider>
       </div>
     );
