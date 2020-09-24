@@ -59,3 +59,10 @@
 
     color: #307B55;
 }
+
+.service-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+
+}

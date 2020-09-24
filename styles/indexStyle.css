@@ -57,6 +57,7 @@
 
 .M0-detail-price {
     margin-top: 70px;
+    display: flex;
     /* color: #339a65; */
     font-style: normal;
     font-weight: normal;
@@ -64,6 +65,18 @@
     line-height: 42px;
     /* justify-items: center; */
     margin-left: 42%;
+}
+
+.M0-detail-price-30000 {
+    margin-top: 10px;
+    display: flex;
+    /* color: #339a65; */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 42px;
+    /* justify-items: center; */
+    margin-left: 907px;
 }
 
 .each-fade {

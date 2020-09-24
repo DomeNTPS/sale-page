@@ -54,8 +54,11 @@ export default function Home() {
         <div className="M0-detail-time">ใช้เวลาตรวจสอบเพียง 1 นาที</div>
         <div className="M0-detail-acc">แม่นยำถึง 93 %</div>
         <div className="M0-detail-price">
-          ราคาเริ่ม&nbsp;&nbsp;60,000 บาท / ปีแรก <br /> &nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; 30,000 บาท / ปีแรก
+          ราคาเริ่ม&nbsp;&nbsp;<div style={{ color: "#339A65" }}>60,000</div>
+          &nbsp; บาท / ปีแรก <br />
+        </div>
+        <div className="M0-detail-price-30000">
+          <div style={{ color: "#339A65" }}>30,000</div> &nbsp; บาท / ปีแรก
         </div>
       </div>
       <div style={{ justifyContent: "center", marginLeft: 600, marginTop: 90 }}>

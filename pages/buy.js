@@ -9,6 +9,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import NumberFormat from "react-number-format";
 import MaskedInput from "react-text-mask";
 import PropTypes from "prop-types";
+import Buybutton from "../components/BuyButton";
 
 const useStyles = makeStyles((theme) => ({
   selectEmpty: {
@@ -133,7 +134,7 @@ function buy() {
     };
 
     return (
-      <div>
+      <div style={{ height: 1100 }}>
         <div className="buy-head">ลงทะเบียนเพื่อทำการสั่งซื้อ</div>
         <div className="buy-from">
           <div className="buy-input">
@@ -166,6 +167,7 @@ function buy() {
               variant="filled"
               style={{ width: 400, marginTop: 20 }}
               className={classes.root}
+              name="phonenumber"
               InputProps={{
                 inputComponent: NumberFormatCustom,
               }}
@@ -240,6 +242,16 @@ function buy() {
               className={classes.root}
             />
           </div>
+        </div>
+        <div className="buy-result">
+          ราคารวม &nbsp;&nbsp;&nbsp; <div className="buy-price">30,000</div>{" "}
+          &nbsp;&nbsp;&nbsp; บาท
+        </div>
+        <div className="buy-button">
+          <Buybutton />
+        </div>
+        <div className="buy-warning">
+          *เมื่อทำรายการเสร็จเจ้าหน้าที่จะติดต่อกลับไปตามข้อมูลที่ให้ไว้
         </div>
       </div>
     );

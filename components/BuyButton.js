@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   buybutton: {
     background: "#339a65",
     color: "#fff",
-    borderRadius: 3,
+    borderRadius: 6,
     border: "6px",
     fontSize: 20,
     padding: "10px 55px",
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 function BuyButton() {
   const classes = useStyles();
     return (
-      <div className="buybutton">
+      <div>
           <Button className={classes.buybutton}>ซื้อสินค้า</Button>
       </div>
     );

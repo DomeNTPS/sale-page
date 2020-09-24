@@ -36,16 +36,20 @@ function detail() {
           เครื่องตรวจสอบคุณภาพข้าวด้วยเทคโนโลยีปัญญาประดิษฐ์ (AI)
         </div>
         <div className="detail-size">
-          ขนาดเครื่อง &nbsp; &nbsp; &nbsp; 23x45x50 &nbsp; &nbsp; &nbsp;
-          เซนติเมตร
+          ขนาดเครื่อง &nbsp; &nbsp; &nbsp;{" "}
+          <div style={{ color: "#339A65", fontSize: "24px" }}>23x45x50</div>{" "}
+          &nbsp; &nbsp; &nbsp; เซนติเมตร
         </div>
         <div className="detail-weight">
-          นำ้หนักเครื่อง &nbsp; &nbsp; &nbsp; &nbsp; 100 &nbsp; &nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; กิโลกรัม
+          น้ำหนักเครื่อง &nbsp; &nbsp; &nbsp; &nbsp;{" "}
+          <div style={{ color: "#339A65", fontSize: "24px" }}>100</div> &nbsp;
+          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; กิโลกรัม
         </div>
         <div className="detail"></div>
         <div style={{ display: "flex" }}>
-          <Buybutton />
+          <div className="detail-buybutton">
+            <Buybutton />
+          </div>
           <div className="detail-contactbutton">
             <Button className={classes.contactbutton}>ติดต่อเรา</Button>
           </div>

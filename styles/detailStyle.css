@@ -59,7 +59,7 @@
     margin-left: 41%;
     margin-top: 30px;
     height: 30px;
-    
+    display: flex;
 
     font-family: Prompt;
     font-style: normal;
@@ -74,7 +74,7 @@
      margin-left: 41%;
      margin-top: 30px;
      height: 30px;
-
+     display: flex;
 
      font-family: Prompt;
      font-style: normal;
@@ -88,6 +88,13 @@
 .detail-contactbutton {
     margin-top: 60px;
     margin-left: 100px;
+
+    border-radius: 6px;
+}
+
+.detail-buybutton {
+    margin-top: 60px;
+    margin-left: 35%;
 
     border-radius: 6px;
 }
