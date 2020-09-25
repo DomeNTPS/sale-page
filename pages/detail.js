@@ -37,16 +37,39 @@ function detail() {
         </div>
         <div className="detail-size">
           ขนาดเครื่อง &nbsp; &nbsp; &nbsp;{" "}
-          <div style={{ color: "#339A65", fontSize: "24px" }}>23x45x50</div>{" "}
+          <div style={{ color: "#339A65", fontSize: "24px" }}>28x52.9x24</div>{" "}
           &nbsp; &nbsp; &nbsp; เซนติเมตร
         </div>
         <div className="detail-weight">
           น้ำหนักเครื่อง &nbsp; &nbsp; &nbsp; &nbsp;{" "}
-          <div style={{ color: "#339A65", fontSize: "24px" }}>100</div> &nbsp;
-          &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; กิโลกรัม
+          <div
+            style={{
+              color: "#339A65",
+              fontSize: "24px",
+              marginLeft: 30,
+              marginRight: 30,
+            }}
+          >
+            2
+          </div>{" "}
+          &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; กิโลกรัม
         </div>
-        <div className="detail"></div>
-        <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+        >
+          <div className="detail-box"></div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+        >
           <div className="detail-buybutton">
             <Buybutton />
           </div>

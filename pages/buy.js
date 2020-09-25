@@ -10,6 +10,7 @@ import NumberFormat from "react-number-format";
 import MaskedInput from "react-text-mask";
 import PropTypes from "prop-types";
 import Buybutton from "../components/BuyButton";
+import CheckIcon from "@material-ui/icons/Check";
 
 const useStyles = makeStyles((theme) => ({
   selectEmpty: {
@@ -257,6 +258,7 @@ function buy() {
               variant="filled"
               style={{ marginLeft: 270, width: 400, marginTop: 20 }}
               className={classes.root}
+              disabled={true}
             />
           </div>
         </div>
@@ -279,6 +281,10 @@ function buy() {
           </div>
           <div className="buy-input">
             <div style={{ marginLeft: 270 }}>ฟังก์ชั่น (Function)</div>
+            <ul>
+              <li>ข้าวขาว เต็ม</li>
+              <li>ข้าวขาว ต้นข้าว</li>
+            </ul>
             <TextField
               id="filled-function"
               placeholder="30,000"
@@ -298,6 +304,7 @@ function buy() {
         <div className="buy-warning">
           *เมื่อทำรายการเสร็จเจ้าหน้าที่จะติดต่อกลับไปตามข้อมูลที่ให้ไว้
         </div>
+        <CheckIcon />
       </div>
     );
 }
