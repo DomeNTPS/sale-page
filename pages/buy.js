@@ -127,12 +127,13 @@ function buy() {
       });
       console.log(ppackage)
     };
-    const [value, setValue] = React.useState("Yes");
+    const [value, setValue] = React.useState("");
 
     let price = ('')
 
     const handleChange = (event) => {
       setValue(event.target.value);
+      console.log(value)
     };
 
     switch (ppackage.package) {
@@ -140,16 +141,33 @@ function buy() {
         price = "";
         break;
       case "1":
-        price = "70,000";
+        if (value=="Yes") {
+          price = "70,000"
+        }
+        else{
+          price = "60,000";
+        }
         break;
       case "2":
-        price = "88,000";
+        if (value == "Yes") {
+          price = "88,000";
+        } else {
+          price = "80,000";
+        }
         break;
       case "3":
-        price = "97,000";
+        if (value == "Yes") {
+          price = "97,000";
+        } else {
+          price = "90,000";
+        }
         break;
       case "4":
-        price = "130,000";
+        if (value == "Yes") {
+          price = "130,000";
+        } else {
+          price = "125,000";
+        }
         break;
       case "5":
         price = "140,000";
@@ -252,11 +270,11 @@ function buy() {
               onChange={handleChange}
             >
               <FormControlLabel
-                value="female"
+                value="Yes"
                 control={<Radio />}
                 label="Yes"
               />
-              <FormControlLabel value="male" control={<Radio />} label="No" />
+              <FormControlLabel value="No" control={<Radio />} label="No" />
             </RadioGroup>
           </div>
           <div className="buy-input">
