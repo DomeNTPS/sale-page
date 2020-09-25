@@ -114,11 +114,10 @@ TextMaskCustom.propTypes = {
   inputRef: PropTypes.func.isRequired,
 };
 
-
 function buy() {
     const classes = useStyles();
     const [ppackage, setPackage] = React.useState({
-      package: "",
+      package: 0,
     });
     const handleChangePackage = (event) => {
       const name = event.target.name;
@@ -126,12 +125,39 @@ function buy() {
         ...ppackage,
         [name]: event.target.value,
       });
+      console.log(ppackage)
     };
     const [value, setValue] = React.useState("Yes");
+
+    let price = ('')
 
     const handleChange = (event) => {
       setValue(event.target.value);
     };
+
+    switch (ppackage.package) {
+      case "0":
+        price = "";
+        break;
+      case "1":
+        price = "70,000";
+        break;
+      case "2":
+        price = "88,000";
+        break;
+      case "3":
+        price = "97,000";
+        break;
+      case "4":
+        price = "130,000";
+        break;
+      case "5":
+        price = "140,000";
+        break;
+
+      default:
+        break;
+    }
 
     return (
       <div style={{ height: 1100 }}>
@@ -196,7 +222,7 @@ function buy() {
               inputProps={{ "aria-label": "package" }}
               input={<ColorInput />}
             >
-              <option value="">None</option>
+              <option value={0}>None</option>
               <option value={1}>Standard QC</option>
               <option value={2}>Basic QA</option>
               <option value={3}>Standard QA</option>
@@ -209,6 +235,7 @@ function buy() {
             <TextField
               id="filled-price"
               placeholder="ราคา"
+              value={price}
               variant="filled"
               style={{ marginLeft: 270, width: 400, marginTop: 20 }}
               className={classes.root}
