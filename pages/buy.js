@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   root: {
     background: "#EBF4E5",
+    borderRadius: 20,
   },
   input: {
     color: "#1A1B1F",
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   buy: {
     background: "#339a65",
     color: "#fff",
-    borderRadius: 6,
+    borderRadius: 20,
     border: "6px",
     fontSize: 18,
     padding: "5px 20px",
@@ -200,21 +201,27 @@ function buy() {
         <div className="buy-from">
           <div className="buy-input">
             <div>ชื่อ (Name)</div>
-            <TextField
+            <InputBase
               id="filled-name"
               placeholder="ชื่อ"
               variant="filled"
-              style={{ width: 400, marginTop: 20 }}
+              style={{ width: 400, marginTop: 20, height: 60, paddingLeft: 30 }}
               className={classes.root}
             />
           </div>
           <div className="buy-input">
             <div style={{ marginLeft: 270 }}>นามสกุล (Surname)</div>
-            <TextField
+            <InputBase
               id="filled-surname"
               placeholder="นามสกุล"
               variant="filled"
-              style={{ marginLeft: 270, width: 400, marginTop: 20 }}
+              style={{
+                width: 400,
+                marginTop: 20,
+                height: 60,
+                paddingLeft: 30,
+                marginLeft: 270,
+              }}
               className={classes.root}
             />
           </div>
@@ -222,11 +229,11 @@ function buy() {
         <div className="buy-from-sub">
           <div className="buy-input">
             <div>เบอร์โทรศัพท์มือถือ (Phone)</div>
-            <TextField
+            <InputBase
               id="filled-phone"
               placeholder="000-000-0000"
               variant="filled"
-              style={{ width: 400, marginTop: 20 }}
+              style={{ width: 400, marginTop: 20, height: 60, paddingLeft: 30 }}
               className={classes.root}
               name="phonenumber"
               InputProps={{
@@ -236,11 +243,17 @@ function buy() {
           </div>
           <div className="buy-input">
             <div style={{ marginLeft: 270 }}>อีเมล (E-mail)</div>
-            <TextField
+            <InputBase
               id="filled-email"
               placeholder="อีเมล"
               variant="filled"
-              style={{ marginLeft: 270, width: 400, marginTop: 20 }}
+              style={{
+                width: 400,
+                marginTop: 20,
+                height: 60,
+                paddingLeft: 30,
+                marginLeft: 270,
+              }}
               className={classes.root}
             />
           </div>
@@ -267,12 +280,18 @@ function buy() {
           </div>
           <div className="buy-input">
             <div style={{ marginLeft: 270 }}>ราคา (Price)</div>
-            <TextField
+            <InputBase
               id="filled-price"
               placeholder="ราคา"
               value={price}
               variant="filled"
-              style={{ marginLeft: 270, width: 400, marginTop: 20 }}
+              style={{
+                width: 400,
+                marginTop: 20,
+                height: 60,
+                paddingLeft: 30,
+                marginLeft: 270,
+              }}
               className={classes.root}
               disabled={true}
             />
@@ -293,11 +312,11 @@ function buy() {
           </div>
           <div className="buy-input">
             <div style={{ marginLeft: 270 }}>ฟังก์ชั่น (Function)</div>
-            <DialogBuy packagebuy={ppackage.package} value={value}/>
+            <DialogBuy packagebuy={ppackage.package} value={value} />
           </div>
         </div>
         <div className="buy-result">
-            ราคารวม &nbsp;&nbsp;&nbsp; <div className="buy-price">{price}</div>{" "}
+          ราคารวม &nbsp;&nbsp;&nbsp; <div className="buy-price">{price}</div>{" "}
           &nbsp;&nbsp;&nbsp; บาท
         </div>
         <div className="buy-button">

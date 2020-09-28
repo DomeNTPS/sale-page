@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     background: "#339a65",
     color: "#fff",
     borderRadius: 3,
-    border: 0,
     fontSize: 20,
     width: 180,
     padding: "20px 30px",
@@ -25,7 +24,6 @@ function Navbar() {
 
   const classes = useStyles();
     return (
-      <div style={{ display: "flex" }}>
         <div className="navdiv">
           <img src="/M0_SERIES_Label.svg" style={{marginLeft: 30}}/>
           <div className="navbar">
@@ -43,7 +41,6 @@ function Navbar() {
             </Link>
           </div>
         </div>
-      </div>
     );
 }
 
