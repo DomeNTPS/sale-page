@@ -7,6 +7,7 @@ import {
   makeStyles,
   withStyles,
 } from "@material-ui/core/styles";
+import Link from "next/link";
 
 const fadeImages = ["/M0.png", "/M0.png"];
 
@@ -62,9 +63,15 @@ export default function Home() {
         </div>
       </div>
       <div style={{ justifyContent: "center", marginLeft: 600, marginTop: 90 }}>
-        <Button className={classes.button}>ซื้อสินค้า</Button>
-        <Button className={classes.button}>รายละเอียด</Button>
-        <Button className={classes.button}>บริการ</Button>
+        <Link href="/buy">
+          <Button className={classes.button}>ซื้อสินค้า</Button>
+        </Link>
+        <Link href="/detail">
+          <Button className={classes.button}>รายละเอียด</Button>
+        </Link>
+        <Link href="/services">
+          <Button className={classes.button}>บริการ</Button>
+        </Link>
       </div>
     </div>
   );

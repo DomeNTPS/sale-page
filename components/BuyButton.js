@@ -7,6 +7,7 @@ import {
   withStyles,
   styled,
 } from "@material-ui/core/styles";
+import Link from "next/link";
 
 const useStyles = makeStyles((theme) => ({
   buybutton: {
@@ -23,7 +24,9 @@ function BuyButton() {
   const classes = useStyles();
     return (
       <div>
+        <Link href="/buy">
           <Button className={classes.buybutton}>ซื้อสินค้า</Button>
+        </Link>
       </div>
     );
 }
