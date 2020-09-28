@@ -12,13 +12,13 @@ const fadeImages = ["/M0.png", "/M0.png"];
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    background: "#fff",
-    color: "#339a65",
+    background: "#339a65",
+    color: "#fff",
     borderRadius: "6px",
     border: "2px solid #339a65",
     fontSize: 20,
     padding: "10px 55px",
-    marginLeft: 40
+    marginLeft: 40,
   },
 }));
 

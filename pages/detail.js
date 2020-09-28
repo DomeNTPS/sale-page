@@ -8,10 +8,88 @@ import {
   styled,
 } from "@material-ui/core/styles";
 import Buybutton from '../components/BuyButton'
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import PropTypes from "prop-types";
 
+const ImgTabs = withStyles({
+  root: {
+    borderBottom: "1px solid #339A65",
+  },
+  indicator: {
+    backgroundColor: "#339A65",
+  },
+})(Tabs);
+const ImgTab = withStyles((theme) => ({
+  root: {
+    textTransform: "none",
+    minWidth: 72,
+    fontWeight: theme.typography.fontWeightRegular,
+    // marginRight: theme.spacing(4),
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+    "&:hover": {
+      color: "##339A65",
+      opacity: 1,
+    },
+    "&$selected": {
+      color: "#339A65",
+      fontWeight: theme.typography.fontWeightMedium,
+    },
+    "&:focus": {
+      color: "#339A65",
+    },
+  },
+  selected: {},
+}))((props) => <Tab disableRipple {...props} />);
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={2}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
 
 function detail() {
-   const [value, setValue] = React.useState("female");
 
    const useStyles = makeStyles((theme) => ({
      contactbutton: {
@@ -22,12 +100,19 @@ function detail() {
        fontSize: 20,
        padding: "10px 55px",
      },
+     root: {
+      //  flexGrow: 1,
+       backgroundColor: "#fff",
+     },
    }));
 
-   const handleChange = (event) => {
-     setValue(event.target.value);
-   };
    const classes = useStyles();
+
+   const [value, setValue] = React.useState(0);
+
+   const handleChange = (event, newValue) => {
+     setValue(newValue);
+   };
     return (
       <div className="detailall">
         <div className="detail-head">รายละเอียด</div>
@@ -61,7 +146,26 @@ function detail() {
             justifyContent: "center",
           }}
         >
-          <div className="detail-box"></div>
+          <div className="detail-box">
+            <div className={classes.root}>
+              <AppBar position="static" color="default">
+                <ImgTabs
+                  value={value}
+                  onChange={handleChange}
+                  aria-label="simple tabs example"
+                >
+                  <ImgTab label="ตารางที่ 1" {...a11yProps(0)} />
+                  <ImgTab label="ตารางที่ 2" {...a11yProps(1)} />
+                </ImgTabs>
+              </AppBar>
+              <TabPanel value={value} index={0}>
+                <img src="/Table_1.svg" width={1200} />
+              </TabPanel>
+              <TabPanel value={value} index={1}>
+                <img src="/table_2.svg" width={1200} />
+              </TabPanel>
+            </div>
+          </div>
         </div>
         <div
           style={{

@@ -11,8 +11,8 @@ import styled from "styled-components";
 
 const useStyles = makeStyles((theme) => ({
   nav: {
-    background: "#fff",
-    color: "#339a65",
+    background: "#339a65",
+    color: "#fff",
     borderRadius: 3,
     border: 0,
     fontSize: 20,
@@ -25,8 +25,9 @@ function Navbar() {
 
   const classes = useStyles();
     return (
-      <div style={{display:'flex'}}>
+      <div style={{ display: "flex" }}>
         <div className="navdiv">
+          <img src="/M0_SERIES_Label.svg" style={{marginLeft: 30}}/>
           <div className="navbar">
             <Link href="/">
               <Button className={classes.nav}>หน้าแรก</Button>

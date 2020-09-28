@@ -11,6 +11,13 @@ import MaskedInput from "react-text-mask";
 import PropTypes from "prop-types";
 import Buybutton from "../components/BuyButton";
 import CheckIcon from "@material-ui/icons/Check";
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Button from "@material-ui/core/Button";
+import DialogBuy from '../components/DialogBuy'
 
 const useStyles = makeStyles((theme) => ({
   selectEmpty: {
@@ -22,6 +29,14 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     color: "#1A1B1F",
+  },
+  buy: {
+    background: "#339a65",
+    color: "#fff",
+    borderRadius: 6,
+    border: "6px",
+    fontSize: 18,
+    padding: "5px 20px",
   },
 }));
 
@@ -129,6 +144,7 @@ function buy() {
       console.log(ppackage)
     };
     const [value, setValue] = React.useState("");
+
 
     let price = ('')
 
@@ -271,31 +287,17 @@ function buy() {
               value={value}
               onChange={handleChange}
             >
-              <FormControlLabel
-                value="Yes"
-                control={<Radio />}
-                label="Yes"
-              />
+              <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
               <FormControlLabel value="No" control={<Radio />} label="No" />
             </RadioGroup>
           </div>
           <div className="buy-input">
             <div style={{ marginLeft: 270 }}>ฟังก์ชั่น (Function)</div>
-            <ul>
-              <li>ข้าวขาว เต็ม</li>
-              <li>ข้าวขาว ต้นข้าว</li>
-            </ul>
-            <TextField
-              id="filled-function"
-              placeholder="30,000"
-              variant="filled"
-              style={{ marginLeft: 270, width: 400, marginTop: 20 }}
-              className={classes.root}
-            />
+            <DialogBuy packagebuy={ppackage.package} value={value}/>
           </div>
         </div>
         <div className="buy-result">
-          ราคารวม &nbsp;&nbsp;&nbsp; <div className="buy-price">30,000</div>{" "}
+            ราคารวม &nbsp;&nbsp;&nbsp; <div className="buy-price">{price}</div>{" "}
           &nbsp;&nbsp;&nbsp; บาท
         </div>
         <div className="buy-button">
@@ -304,7 +306,6 @@ function buy() {
         <div className="buy-warning">
           *เมื่อทำรายการเสร็จเจ้าหน้าที่จะติดต่อกลับไปตามข้อมูลที่ให้ไว้
         </div>
-        <CheckIcon />
       </div>
     );
 }
