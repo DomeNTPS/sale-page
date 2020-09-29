@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 20,
     padding: "10px 55px",
     marginLeft: 40,
+    [theme.breakpoints.down('md')]:{
+      marginTop: 10,
+      width: 300
+    }
   },
 }));
 
@@ -62,7 +66,7 @@ export default function Home() {
           <div style={{ color: "#339A65" }}>30,000</div> &nbsp; บาท / ปีแรก
         </div>
       </div>
-      <div style={{ justifyContent: "center", marginLeft: 600, marginTop: 90 }}>
+      <div className="M0-button">
         <Link href="/buy">
           <Button className={classes.button}>ซื้อสินค้า</Button>
         </Link>
