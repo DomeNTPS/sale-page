@@ -17,6 +17,12 @@ const useStyles = makeStyles((theme) => ({
     border: "6px",
     fontSize: 20,
     padding: "10px 55px",
+    [theme.breakpoints.down("md")]: {
+      marginTop: 10,
+      width: 200,
+      margin: "auto",
+      justifySelf: 'center'
+    },
   },
 }));
 

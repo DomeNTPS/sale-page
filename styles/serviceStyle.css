@@ -1,4 +1,10 @@
+.service-container {
+    justify-content: center;
+}
+
 .service {
+    display: flex;
+    flex-direction: row;
     width: 78px;
     height: 42px;
     margin-top: 90px;
@@ -64,5 +70,32 @@
     display: flex;
     justify-content: center;
     margin-top: 90px;
+}
 
+@media only screen and (max-width: 600px) {
+    .service-container {
+        height: 1700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+    }
+    .service-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .icon {
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+        justify-content: space-around;
+    }
+    .service-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 90px;
+        /* margin-left: 50%; */
+    }
 }

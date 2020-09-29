@@ -8,6 +8,8 @@ import {
   withStyles,
 } from "@material-ui/core/styles";
 import Link from "next/link";
+import styled from "styled-components";
+import { Label } from '@material-ui/icons';
 
 const fadeImages = ["/M0.png", "/M0.png"];
 
@@ -22,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 40,
     [theme.breakpoints.down('md')]:{
       marginTop: 10,
-      width: 300
+      width: 300,
+      margin: 'auto',
     }
   },
 }));
@@ -52,19 +55,19 @@ export default function Home() {
         </Fade>
       </div>
       <div className="M0">
-        <div className="M0-head">M0 Series</div>
-        <div className="M0-detail">
-          เครื่องตรวจสอบคุณภาพข้าวด้วยเทคโนโลยีปัญญาประดิษฐ์ (AI)
-        </div>
-        <div className="M0-detail-time">ใช้เวลาตรวจสอบเพียง 1 นาที</div>
-        <div className="M0-detail-acc">แม่นยำถึง 93 %</div>
-        <div className="M0-detail-price">
-          ราคาเริ่ม&nbsp;&nbsp;<div style={{ color: "#339A65" }}>60,000</div>
-          &nbsp; บาท / ปีแรก <br />
-        </div>
-        <div className="M0-detail-price-30000">
-          <div style={{ color: "#339A65" }}>30,000</div> &nbsp; บาท / ปีแรก
-        </div>
+          <div className="M0-head">M0 Series</div>
+          <div className="M0-detail">
+            เครื่องตรวจสอบคุณภาพข้าวด้วยเทคโนโลยีปัญญาประดิษฐ์ (AI)
+          </div>
+          <div className="M0-detail-time">ใช้เวลาตรวจสอบเพียง 1 นาที</div>
+          <div className="M0-detail-acc">แม่นยำถึง 93 %</div>
+          <div className="M0-detail-price">
+            ราคา&nbsp;&nbsp;<div style={{ color: "#339A65" }}>30,000</div>
+            &nbsp; บาท / ปี <br />
+          </div>
+          <div className="M0-detail-price-30000">
+            <div style={{ color: "#339A65" }}>60,000</div> &nbsp; บาทในปีแรก
+          </div>
       </div>
       <div className="M0-button">
         <Link href="/buy">
