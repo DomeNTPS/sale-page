@@ -159,10 +159,10 @@ function detail() {
                 </ImgTabs>
               </AppBar>
               <TabPanel value={value} index={0}>
-                <img src="/Table_1.svg" width={1200} />
+                <img src="/Table_1.png" width={1200} />
               </TabPanel>
               <TabPanel value={value} index={1}>
-                <img src="/table_2.svg" width={1200} />
+                <img src="/Table_2.png" width={1200} />
               </TabPanel>
             </div>
           </div>

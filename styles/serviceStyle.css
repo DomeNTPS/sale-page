@@ -1,8 +1,12 @@
+.service-container {
+    justify-content: center;
+}
+
 .service {
-    width: 78px;
+    display: flex;
+    flex-direction: row;
     height: 42px;
     margin-top: 90px;
-    margin-left: 45%;
     justify-content: center;
 
     font-family: Prompt;
@@ -16,7 +20,8 @@
 .customer-service {
     height: 29px;
     margin-top: 50px;
-    margin-left: 41.5%;
+    display: flex;
+    justify-content: space-around;
 
     font-family: Montserrat;
     font-style: normal;
@@ -64,5 +69,87 @@
     display: flex;
     justify-content: center;
     margin-top: 90px;
+}
 
+.img-responsive {
+    width: 100%;
+    max-width: auto;
+    max-height: 230px;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .service-container {
+        height: 1700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .service {
+        display: flex;
+        flex-direction: row;
+        height: 42px;
+        margin-top: 90px;
+        justify-content: center;
+
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 42px;
+
+        color: #339A65;
+    }
+    .customer-service {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 29px;
+
+        color: #4F4F4F;
+    }
+    .service-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 30px auto;
+    }
+    .icon {
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+        justify-content: space-around;
+    }
+    .service-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* margin-top: 50px; */
+        /* margin-left: 50%; */ 
+    }
+    .img-responsive {
+        width: 150px;
+        max-height: auto;
+        justify-self: center;
+        margin-top: 30px;
+        margin-left: 75px;
+    }
+    .icon-text {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+
+        color: #307B55;
+    }
 }
