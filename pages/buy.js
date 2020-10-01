@@ -207,7 +207,6 @@ function buy() {
               variant="filled"
               style={{ width: 400, marginTop: 20, height: 60, paddingLeft: 30 }}
               className={classes.root}
-              inputProps={{ "aria-label": "naked" }}
             />
           </div>
           <div className="buy-input">
