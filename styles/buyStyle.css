@@ -2,8 +2,9 @@
     height: 1100px;
 }
 .buy-head {
+    display: flex;
+    justify-content: center;
     margin-top: 60px;
-    margin-left: 42%;
     height: 42px;
 
     font-family: Prompt;
@@ -89,12 +90,16 @@
     color: #FF0000;
 }
 
+.buy-column2 {
+    margin-left: 270px;
+}
+
 @media only screen and (max-width: 600px) {
 
     .buy-container {
         display: flex;
         flex-direction: column;
-        height: 1700px;
+        height: 1200px;
     }
     .buy-head {
         display: flex;
@@ -105,7 +110,7 @@
         font-family: Prompt;
         font-style: normal;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 24px;
         line-height: 32px;
 
         color: #339a65;
@@ -116,12 +121,12 @@
         padding-top: 10px;
         display: flex;
         flex-direction: column;
-
+        margin: 0px auto;
         font-family: Prompt;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
-        line-height: 30px;
+        line-height: 24px;
 
         color: #1A1B1F;
     }
@@ -130,18 +135,49 @@
         padding-top: 10px;
         display: flex;
         flex-direction: column;
-        /* margin-left: 23%; */
-
+        margin: 0px auto;
         font-family: Prompt;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
-        line-height: 30px;
+        line-height: 24px;
 
         color: #1A1B1F;
     }
     .buy-input {
         width: auto;
-        margin-top: 30px;
+        margin: 30px auto 0;
+    }
+    .buy-column2 {
+        margin-left: 0px;
+    }
+    .buy-result {
+        display: flex;
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        margin: 30px auto 0;
+
+        color: #1A1B1F;
+    }
+    .buy-button {
+        display: flex;
+        width: 100%;
+        margin: 30px auto;
+    }
+    .buy-warning {
+        display: flex;
+        justify-content: center;
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: normal;
+        width: 270px;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 30px auto 0;
+
+        color: #FF0000;
     }
 }

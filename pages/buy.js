@@ -17,9 +17,26 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     backgroundColor: "#EBF4E5",
     width: 400,
-    height: 50,
+    height: 60,
     marginTop: 20,
     borderRadius: 20,
+    [theme.breakpoints.down("md")]: {
+      width: 300,
+    },
+  },
+  numberinput: {
+    background: "#EBF4E5",
+    borderRadius: 20,
+    width: 400,
+    marginTop: 20,
+    height: 60,
+    paddingTop: 17,
+    paddingLeft: 30,
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: 0,
+      width: 300,
+      paddingLeft: 20,
+    },
   },
   root: {
     background: "#EBF4E5",
@@ -31,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       paddingLeft: 0,
       width: 300,
+      paddingLeft: 20,
     },
   },
   inputcolumn2: {
@@ -56,6 +74,13 @@ const useStyles = makeStyles((theme) => ({
     border: "6px",
     fontSize: 18,
     padding: "5px 20px",
+  },
+  radio: {
+    width: 400,
+    [theme.breakpoints.down("md")]: {
+      marginLeft: 0,
+      width: 300,
+    },
   },
 }));
 
@@ -164,7 +189,7 @@ function buy() {
     const [value, setValue] = React.useState("");
 
 
-    let price = ('')
+    let price = ('-')
 
     const handleChange = (event) => {
       setValue(event.target.value);
@@ -226,7 +251,7 @@ function buy() {
             />
           </div>
           <div className="buy-input">
-            <div style={{ marginLeft: 270 }}>นามสกุล (Surname)</div>
+            <div className="buy-column2">นามสกุล (Surname)</div>
             <InputBase
               id="filled-surname"
               placeholder="นามสกุล"
@@ -238,19 +263,19 @@ function buy() {
         <div className="buy-from-sub">
           <div className="buy-input">
             <div>เบอร์โทรศัพท์มือถือ (Phone)</div>
-            <InputBase
+            <TextField
               id="filled-phone"
               placeholder="000-000-0000"
-              variant="filled"
-              className={classes.root}
+              className={classes.numberinput}
               name="phonenumber"
               InputProps={{
                 inputComponent: NumberFormatCustom,
+                disableUnderline: true,
               }}
             />
           </div>
           <div className="buy-input">
-            <div style={{ marginLeft: 270 }}>อีเมล (E-mail)</div>
+            <div className="buy-column2">อีเมล (E-mail)</div>
             <InputBase
               id="filled-email"
               placeholder="อีเมล"
@@ -279,7 +304,7 @@ function buy() {
             </NativeSelect>
           </div>
           <div className="buy-input">
-            <div style={{ marginLeft: 270 }}>ราคา (Price)</div>
+            <div className="buy-column2">ราคา (Price)</div>
             <InputBase
               id="filled-price"
               placeholder="ราคา"
@@ -292,19 +317,20 @@ function buy() {
         </div>
         <div className="buy-from-sub">
           <div className="buy-input">
-            <div style={{ width: 400 }}>Add Sizing</div>
+            <div >Add Sizing</div>
             <RadioGroup
               aria-label="gender"
               name="gender1"
               value={value}
               onChange={handleChange}
+              className={classes.radio}
             >
               <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
               <FormControlLabel value="No" control={<Radio />} label="No" />
             </RadioGroup>
           </div>
           <div className="buy-input">
-            <div style={{ marginLeft: 270 }}>ฟังก์ชั่น (Function)</div>
+            <div className="buy-column2">ฟังก์ชั่น (Function)</div>
             <DialogBuy packagebuy={ppackage.package} value={value} />
           </div>
         </div>
