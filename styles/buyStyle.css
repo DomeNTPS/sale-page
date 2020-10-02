@@ -1,3 +1,6 @@
+.buy-container {
+    height: 1100px;
+}
 .buy-head {
     margin-top: 60px;
     margin-left: 42%;
@@ -13,10 +16,10 @@
 }
 
 .buy-from {
-    /* justify-content: space-around; */
-    padding-top: 100px;
     display: flex;
-    margin-left: 23%;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 100px;
 
     font-family: Prompt;
     font-style: normal;
@@ -27,10 +30,9 @@
     color: #1A1B1F;
 }
 .buy-from-sub {
-    /* justify-content: space-around; */
+    justify-content: center;
     padding-top: 50px;
     display: flex;
-    margin-left: 23%;
 
     font-family: Prompt;
     font-style: normal;
@@ -85,4 +87,61 @@
     margin-top: 50px;
 
     color: #FF0000;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .buy-container {
+        display: flex;
+        flex-direction: column;
+        height: 1700px;
+    }
+    .buy-head {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        height: 42px;
+
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 32px;
+
+        color: #339a65;
+    }
+
+    .buy-from {
+        justify-content: space-around;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+
+        color: #1A1B1F;
+    }
+    .buy-from-sub {
+        justify-content: space-evenly;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        /* margin-left: 23%; */
+
+        font-family: Prompt;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+
+        color: #1A1B1F;
+    }
+    .buy-input {
+        width: auto;
+        margin-top: 30px;
+    }
 }

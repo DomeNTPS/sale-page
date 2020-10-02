@@ -15,6 +15,13 @@ const useStyles = makeStyles((theme) => ({
     border: "6px",
     fontSize: 18,
     padding: "5px 20px",
+    marginLeft: 270,
+    width: 400,
+    marginTop: 20,
+    [theme.breakpoints.down("md")]: {
+      marginLeft: 0,
+      width: 300,
+    },
   },
 }));
 
@@ -85,7 +92,6 @@ function DialogBuy({packagebuy, value}) {
           variant="outlined"
           color="primary"
           onClick={handleClickOpen}
-          style={{ marginLeft: 270, width: 400, marginTop: 20 }}
           className={classes.buy}
         >
           ตรวจสอบฟังก์ชัน

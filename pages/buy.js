@@ -10,23 +10,41 @@ import NumberFormat from "react-number-format";
 import MaskedInput from "react-text-mask";
 import PropTypes from "prop-types";
 import Buybutton from "../components/BuyButton";
-import CheckIcon from "@material-ui/icons/Check";
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Button from "@material-ui/core/Button";
 import DialogBuy from '../components/DialogBuy'
 
 const useStyles = makeStyles((theme) => ({
   selectEmpty: {
     marginTop: theme.spacing(2),
     backgroundColor: "#EBF4E5",
+    width: 400,
+    height: 50,
+    marginTop: 20,
+    borderRadius: 20,
   },
   root: {
     background: "#EBF4E5",
     borderRadius: 20,
+    width: 400,
+    marginTop: 20,
+    height: 60,
+    paddingLeft: 30,
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: 0,
+      width: 300,
+    },
+  },
+  inputcolumn2: {
+    background: "#EBF4E5",
+    borderRadius: 20,
+    width: 400,
+    marginTop: 20,
+    height: 60,
+    paddingLeft: 30,
+    marginLeft: 270,
+    [theme.breakpoints.down("md")]: {
+      marginLeft: 0,
+      width: 300,
+    },
   },
   input: {
     color: "#1A1B1F",
@@ -43,12 +61,11 @@ const useStyles = makeStyles((theme) => ({
 
 const ColorInput = withStyles((theme) => ({
   input: {
-    borderRadius: 4,
-    // position: "relative",
+    borderRadius: 20,
     backgroundColor: "#EBF4E5",
     border: "1px solid #EBF4E5",
-    fontSize: 24,
-    // padding: "10px 26px 10px 12px",
+    fontSize: 18,
+    padding: "10px 26px 10px 12px",
     transition: theme.transitions.create(["border-color", "box-shadow"]),
     // Use the system font instead of the default Roboto font.
     fontFamily: [
@@ -196,7 +213,7 @@ function buy() {
     }
 
     return (
-      <div style={{ height: 1100 }}>
+      <div className="buy-container">
         <div className="buy-head">ลงทะเบียนเพื่อทำการสั่งซื้อ</div>
         <div className="buy-from">
           <div className="buy-input">
@@ -205,7 +222,6 @@ function buy() {
               id="filled-name"
               placeholder="ชื่อ"
               variant="filled"
-              style={{ width: 400, marginTop: 20, height: 60, paddingLeft: 30 }}
               className={classes.root}
             />
           </div>
@@ -215,14 +231,7 @@ function buy() {
               id="filled-surname"
               placeholder="นามสกุล"
               variant="filled"
-              style={{
-                width: 400,
-                marginTop: 20,
-                height: 60,
-                paddingLeft: 30,
-                marginLeft: 270,
-              }}
-              className={classes.root}
+              className={classes.inputcolumn2}
             />
           </div>
         </div>
@@ -233,7 +242,6 @@ function buy() {
               id="filled-phone"
               placeholder="000-000-0000"
               variant="filled"
-              style={{ width: 400, marginTop: 20, height: 60, paddingLeft: 30 }}
               className={classes.root}
               name="phonenumber"
               InputProps={{
@@ -247,14 +255,7 @@ function buy() {
               id="filled-email"
               placeholder="อีเมล"
               variant="filled"
-              style={{
-                width: 400,
-                marginTop: 20,
-                height: 60,
-                paddingLeft: 30,
-                marginLeft: 270,
-              }}
-              className={classes.root}
+              className={classes.inputcolumn2}
             />
           </div>
         </div>
@@ -264,7 +265,6 @@ function buy() {
             <NativeSelect
               value={ppackage.package}
               onChange={handleChangePackage}
-              style={{ width: 400, height: 50, marginTop: 20 }}
               name="package"
               className={classes.selectEmpty}
               inputProps={{ "aria-label": "package" }}
@@ -285,14 +285,7 @@ function buy() {
               placeholder="ราคา"
               value={price}
               variant="filled"
-              style={{
-                width: 400,
-                marginTop: 20,
-                height: 60,
-                paddingLeft: 30,
-                marginLeft: 270,
-              }}
-              className={classes.root}
+              className={classes.inputcolumn2}
               disabled={true}
             />
           </div>
