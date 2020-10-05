@@ -14,6 +14,7 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import PropTypes from "prop-types";
+import Link from "next/link";
 
 const ImgTabs = withStyles({
   root: {
@@ -99,9 +100,15 @@ function detail() {
        border: "2px solid #339a65",
        fontSize: 20,
        padding: "10px 55px",
+       [theme.breakpoints.down("md")]: {
+         marginTop: 10,
+         width: 200,
+         margin: "auto",
+         justifySelf: "center",
+       },
      },
      root: {
-      //  flexGrow: 1,
+       //  flexGrow: 1,
        backgroundColor: "#fff",
      },
    }));
@@ -139,13 +146,7 @@ function detail() {
           </div>{" "}
           &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; กิโลกรัม
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
+        <div className="detail-tab">
           <div className="detail-box">
             <div className={classes.root}>
               <AppBar position="static" color="default">
@@ -159,21 +160,23 @@ function detail() {
                 </ImgTabs>
               </AppBar>
               <TabPanel value={value} index={0}>
-                <img src="/Table_1.png" width={1200} />
+                <img
+                  src="/Table_1.png"
+                  className="detail-img-responsive"
+                  width={1200}
+                />
               </TabPanel>
               <TabPanel value={value} index={1}>
-                <img src="/Table_2.png" width={1200} />
+                <img
+                  src="/Table_2.png"
+                  className="detail-img-responsive"
+                  width={1200}
+                />
               </TabPanel>
             </div>
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
+        <div className="detail-button-group">
           <div className="detail-buybutton">
             <Buybutton />
           </div>
