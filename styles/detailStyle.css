@@ -11,14 +11,16 @@
 }
 
 .detailall {
-    justify-content: center;
-    height: 2000px;
+    /* justify-content: center; */
+    /* height: 2000px; */
     width: 100%;
+    padding-bottom: 40px;
 }
 
 .detail-head {
-    margin-left: 46%;
-    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
     height: 42px;
 
     font-family: Prompt;
@@ -31,8 +33,9 @@
 }
 
 .detail-subhead {
-    margin-left: 46.7%;
-    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
     height: 29px;
 
     font-family: Montserrat;
@@ -45,8 +48,9 @@
 }
 
 .detail-detail {
-    margin-left: 37%;
-    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
     height: 30px;
 
     font-family: Prompt;
@@ -92,13 +96,13 @@
 }
 
 .detail-contactbutton {
-    margin-top: 60px;
+    margin-top: 65px;
     margin-left: 100px;
     border-radius: 6px;
 }
 
 .detail-buybutton {
-    margin-top: 60px;
+    margin-top: 65px;
     border-radius: 6px;
 }
 .detail-button-group {

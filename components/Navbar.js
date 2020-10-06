@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#339a65",
     color: "#fff",
     borderRadius: 3,
+    fontFamily: "Prompt",
     fontSize: 20,
     width: 180,
     padding: "20px 30px",

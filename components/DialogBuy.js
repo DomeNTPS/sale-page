@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     borderRadius: 6,
     border: "6px",
+    fontFamily: "Prompt",
     fontSize: 18,
     padding: "5px 20px",
     marginLeft: 270,

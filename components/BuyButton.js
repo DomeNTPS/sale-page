@@ -1,11 +1,7 @@
 import React from 'react'
 import Button from "@material-ui/core/Button";
 import {
-  createMuiTheme,
-  ThemeProvider,
   makeStyles,
-  withStyles,
-  styled,
 } from "@material-ui/core/styles";
 import Link from "next/link";
 
@@ -15,13 +11,14 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     borderRadius: 6,
     border: "6px",
+    fontFamily: "Prompt",
     fontSize: 20,
     padding: "10px 55px",
     [theme.breakpoints.down("md")]: {
       marginTop: 10,
       width: 200,
       margin: "auto",
-      justifySelf: 'center'
+      justifySelf: "center",
     },
   },
 }));

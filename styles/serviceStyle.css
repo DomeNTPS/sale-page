@@ -1,5 +1,6 @@
 .service-container {
     justify-content: center;
+    padding-bottom: 40px;
 }
 
 .service {
@@ -43,7 +44,7 @@
     width: 420px;
     height: 400px;
     justify-content: space-around;
-    margin: auto;
+    margin: 55px 18px 0px;
 
     background: #FFFFFF;
     border: 1px solid #EAEAEA;

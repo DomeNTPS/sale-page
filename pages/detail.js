@@ -98,6 +98,7 @@ function detail() {
        color: "#339a65",
        borderRadius: "6px",
        border: "2px solid #339a65",
+       fontFamily: "Prompt",
        fontSize: 20,
        padding: "10px 55px",
        [theme.breakpoints.down("md")]: {

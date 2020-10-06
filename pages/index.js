@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "6px",
     border: "2px solid #339a65",
     fontSize: 20,
+    fontFamily: 'Prompt',
     padding: "10px 55px",
     marginLeft: 40,
     [theme.breakpoints.down('md')]:{
@@ -44,10 +45,10 @@ export default function Home() {
             <div>
               <img src={fadeImages[0]} />
             </div>
-            <p>M0 Series</p>
+            {/* <p>M0 Series</p> */}
           </div>
           <div className="each-fade">
-            <p>M0 series</p>
+            {/* <p>M0 series</p> */}
             <div>
               <img src={fadeImages[1]} />
             </div>

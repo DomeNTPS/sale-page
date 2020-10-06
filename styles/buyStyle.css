@@ -1,5 +1,6 @@
 .buy-container {
-    height: 1100px;
+    /* height: 1100px; */
+    padding-bottom: 40px;
 }
 .buy-head {
     display: flex;
@@ -20,7 +21,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 75px;
 
     font-family: Prompt;
     font-style: normal;
