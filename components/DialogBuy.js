@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
       width: 300,
     },
   },
+  dialog : {
+    // width: 500,
+  },
 }));
 
 function DialogBuy({packagebuy, value}) {
@@ -103,20 +106,24 @@ function DialogBuy({packagebuy, value}) {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          maxWidth={"xs"}
+          fullWidth={true}
         >
           <DialogTitle id="alert-dialog-title">{"Function"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <ul>
-                <li>ข้าวขาว เต็ม</li>
-                <li>ข้าวขาว ต้นข้าว</li>
-                <li>ข้าวขาว หัก</li>
-                <li>ข้าวแดง เต็ม</li>
-                <li>ข้าวแกง หัก</li>
-                <li>ข้าวกล้อง</li>
-                <li>ข้าวแกลบ</li>
-                <li>ข้าวเปลือก</li>
-              </ul>
+              <div style={{ paddingLeft: 50 }}>
+                <ul>
+                  <li>ข้าวขาว เต็ม</li>
+                  <li>ข้าวขาว ต้นข้าว</li>
+                  <li>ข้าวขาว หัก</li>
+                  <li>ข้าวแดง เต็ม</li>
+                  <li>ข้าวแกง หัก</li>
+                  <li>ข้าวกล้อง</li>
+                  <li>ข้าวแกลบ</li>
+                  <li>ข้าวเปลือก</li>
+                </ul>
+              </div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -130,21 +137,25 @@ function DialogBuy({packagebuy, value}) {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          maxWidth={"xs"}
+          fullWidth={true}
         >
           <DialogTitle id="alert-dialog-title">{"Function"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <ul>
-                <li>ข้าวขาว เต็ม</li>
-                <li>ข้าวขาว ต้นข้าว</li>
-                <li>ข้าวขาว หัก</li>
-                <li>ข้าวแดง เต็ม</li>
-                <li>ข้าวแกง หัก</li>
-                <li>ข้าวกล้อง</li>
-                <li>ข้าวแกลบ</li>
-                <li>ข้าวเปลือก</li>
-                <li>ขนาดข้าว (Sizing)</li>
-              </ul>
+              <div style={{ paddingLeft: 50 }}>
+                <ul>
+                  <li>ข้าวขาว เต็ม</li>
+                  <li>ข้าวขาว ต้นข้าว</li>
+                  <li>ข้าวขาว หัก</li>
+                  <li>ข้าวแดง เต็ม</li>
+                  <li>ข้าวแกง หัก</li>
+                  <li>ข้าวกล้อง</li>
+                  <li>ข้าวแกลบ</li>
+                  <li>ข้าวเปลือก</li>
+                  <li>ขนาดข้าว (Sizing)</li>
+                </ul>
+              </div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -159,17 +170,21 @@ function DialogBuy({packagebuy, value}) {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          maxWidth={"xs"}
+          fullWidth={true}
         >
           <DialogTitle id="alert-dialog-title">{"Function"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <ul>
-                <li>ตรวจสอบโดยน้ำหนัก</li>
-                <li>ข้าวเหนียว</li>
-                <li>ข้าวเหลือง</li>
-                <li>ข้าวท้องไข่</li>
-                <li>ข้าวเสีย</li>
-              </ul>
+              <div style={{ paddingLeft: 50 }}>
+                <ul>
+                  <li>ตรวจสอบโดยน้ำหนัก</li>
+                  <li>ข้าวเหนียว</li>
+                  <li>ข้าวเหลือง</li>
+                  <li>ข้าวท้องไข่</li>
+                  <li>ข้าวเสีย</li>
+                </ul>
+              </div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -183,18 +198,22 @@ function DialogBuy({packagebuy, value}) {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          maxWidth={"xs"}
+          fullWidth={true}
         >
           <DialogTitle id="alert-dialog-title">{"Function"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <ul>
-                <li>ขนาดข้าว (Sizing)</li>
-                <li>ตรวจสอบโดยน้ำหนัก</li>
-                <li>ข้าวเหนียว</li>
-                <li>ข้าวเหลือง</li>
-                <li>ข้าวท้องไข่</li>
-                <li>ข้าวเสีย</li>
-              </ul>
+              <div style={{ paddingLeft: 50 }}>
+                <ul>
+                  <li>ขนาดข้าว (Sizing)</li>
+                  <li>ตรวจสอบโดยน้ำหนัก</li>
+                  <li>ข้าวเหนียว</li>
+                  <li>ข้าวเหลือง</li>
+                  <li>ข้าวท้องไข่</li>
+                  <li>ข้าวเสีย</li>
+                </ul>
+              </div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -210,20 +229,24 @@ function DialogBuy({packagebuy, value}) {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          maxWidth={"xs"}
+          fullWidth={true}
         >
           <DialogTitle id="alert-dialog-title">{"Function"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <ul>
-                <li>ตรวจสอบโดยน้ำหนัก</li>
-                <li>ข้าวเหนียว</li>
-                <li>ข้าวเหลือง</li>
-                <li>ข้าวท้องไข่</li>
-                <li>ข้าวเสีย</li>
-                <li>Milling Degree</li>
-                <li>ข้าวเมล็ดลีบ</li>
-                <li>ข้าวเมล็ดอ่อน</li>
-              </ul>
+              <div style={{ paddingLeft: 50 }}>
+                <ul>
+                  <li>ตรวจสอบโดยน้ำหนัก</li>
+                  <li>ข้าวเหนียว</li>
+                  <li>ข้าวเหลือง</li>
+                  <li>ข้าวท้องไข่</li>
+                  <li>ข้าวเสีย</li>
+                  <li>Milling Degree</li>
+                  <li>ข้าวเมล็ดลีบ</li>
+                  <li>ข้าวเมล็ดอ่อน</li>
+                </ul>
+              </div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -237,21 +260,25 @@ function DialogBuy({packagebuy, value}) {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          maxWidth={"xs"}
+          fullWidth={true}
         >
           <DialogTitle id="alert-dialog-title">{"Function"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <ul>
-                <li>ขนาดข้าว (Sizing)</li>
-                <li>ตรวจสอบโดยน้ำหนัก</li>
-                <li>ข้าวเหนียว</li>
-                <li>ข้าวเหลือง</li>
-                <li>ข้าวท้องไข่</li>
-                <li>ข้าวเสีย</li>
-                <li>Milling Degree</li>
-                <li>ข้าวเมล็ดลีบ</li>
-                <li>ข้าวเมล็ดอ่อน</li>
-              </ul>
+              <div style={{ paddingLeft: 50 }}>
+                <ul>
+                  <li>ขนาดข้าว (Sizing)</li>
+                  <li>ตรวจสอบโดยน้ำหนัก</li>
+                  <li>ข้าวเหนียว</li>
+                  <li>ข้าวเหลือง</li>
+                  <li>ข้าวท้องไข่</li>
+                  <li>ข้าวเสีย</li>
+                  <li>Milling Degree</li>
+                  <li>ข้าวเมล็ดลีบ</li>
+                  <li>ข้าวเมล็ดอ่อน</li>
+                </ul>
+              </div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -266,25 +293,29 @@ function DialogBuy({packagebuy, value}) {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          maxWidth={"xs"}
+          fullWidth={true}
         >
           <DialogTitle id="alert-dialog-title">{"Function"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <ul>
-                <li>ข้าวขาว เต็ม</li>
-                <li>ข้าวขาว ต้นข้าว</li>
-                <li>ข้าวขาว หัก</li>
-                <li>ข้าวแดง เต็ม</li>
-                <li>ข้าวแกง หัก</li>
-                <li>ข้าวกล้อง</li>
-                <li>ข้าวแกลบ</li>
-                <li>ข้าวเปลือก</li>
-                <li>ตรวจสอบโดยน้ำหนัก</li>
-                <li>ข้าวเหนียว</li>
-                <li>ข้าวเหลือง</li>
-                <li>ข้าวท้องไข่</li>
-                <li>ข้าวเสีย</li>
-              </ul>
+              <div style={{ paddingLeft: 50 }}>
+                <ul>
+                  <li>ข้าวขาว เต็ม</li>
+                  <li>ข้าวขาว ต้นข้าว</li>
+                  <li>ข้าวขาว หัก</li>
+                  <li>ข้าวแดง เต็ม</li>
+                  <li>ข้าวแกง หัก</li>
+                  <li>ข้าวกล้อง</li>
+                  <li>ข้าวแกลบ</li>
+                  <li>ข้าวเปลือก</li>
+                  <li>ตรวจสอบโดยน้ำหนัก</li>
+                  <li>ข้าวเหนียว</li>
+                  <li>ข้าวเหลือง</li>
+                  <li>ข้าวท้องไข่</li>
+                  <li>ข้าวเสีย</li>
+                </ul>
+              </div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -298,26 +329,30 @@ function DialogBuy({packagebuy, value}) {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          maxWidth={"xs"}
+          fullWidth={true}
         >
           <DialogTitle id="alert-dialog-title">{"Function"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <ul>
-                <li>ข้าวขาว เต็ม</li>
-                <li>ข้าวขาว ต้นข้าว</li>
-                <li>ข้าวขาว หัก</li>
-                <li>ข้าวแดง เต็ม</li>
-                <li>ข้าวแกง หัก</li>
-                <li>ข้าวกล้อง</li>
-                <li>ข้าวแกลบ</li>
-                <li>ข้าวเปลือก</li>
-                <li>ขนาดข้าว (Sizing)</li>
-                <li>ตรวจสอบโดยน้ำหนัก</li>
-                <li>ข้าวเหนียว</li>
-                <li>ข้าวเหลือง</li>
-                <li>ข้าวท้องไข่</li>
-                <li>ข้าวเสีย</li>
-              </ul>
+              <div style={{ paddingLeft: 50 }}>
+                <ul>
+                  <li>ข้าวขาว เต็ม</li>
+                  <li>ข้าวขาว ต้นข้าว</li>
+                  <li>ข้าวขาว หัก</li>
+                  <li>ข้าวแดง เต็ม</li>
+                  <li>ข้าวแกง หัก</li>
+                  <li>ข้าวกล้อง</li>
+                  <li>ข้าวแกลบ</li>
+                  <li>ข้าวเปลือก</li>
+                  <li>ขนาดข้าว (Sizing)</li>
+                  <li>ตรวจสอบโดยน้ำหนัก</li>
+                  <li>ข้าวเหนียว</li>
+                  <li>ข้าวเหลือง</li>
+                  <li>ข้าวท้องไข่</li>
+                  <li>ข้าวเสีย</li>
+                </ul>
+              </div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -332,29 +367,33 @@ function DialogBuy({packagebuy, value}) {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title2"
           aria-describedby="alert-dialog-description2"
+          maxWidth={"xs"}
+          fullWidth={true}
         >
           <DialogTitle id="alert-dialog-title">{"Function"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <ul>
-                <li>ข้าวขาว เต็ม</li>
-                <li>ข้าวขาว ต้นข้าว</li>
-                <li>ข้าวขาว หัก</li>
-                <li>ข้าวแดง เต็ม</li>
-                <li>ข้าวแกง หัก</li>
-                <li>ข้าวกล้อง</li>
-                <li>ข้าวแกลบ</li>
-                <li>ข้าวเปลือก</li>
-                <li>ขนาดข้าว (Sizing)</li>
-                <li>ตรวจสอบโดยน้ำหนัก</li>
-                <li>ข้าวเหนียว</li>
-                <li>ข้าวเหลือง</li>
-                <li>ข้าวท้องไข่</li>
-                <li>ข้าวเสีย</li>
-                <li>Milling Degree</li>
-                <li>ข้าวเมล็ดลีบ</li>
-                <li>ข้าวเมล็ดอ่อน</li>
-              </ul>
+              <div style={{ paddingLeft: 50 }}>
+                <ul>
+                  <li>ข้าวขาว เต็ม</li>
+                  <li>ข้าวขาว ต้นข้าว</li>
+                  <li>ข้าวขาว หัก</li>
+                  <li>ข้าวแดง เต็ม</li>
+                  <li>ข้าวแกง หัก</li>
+                  <li>ข้าวกล้อง</li>
+                  <li>ข้าวแกลบ</li>
+                  <li>ข้าวเปลือก</li>
+                  <li>ขนาดข้าว (Sizing)</li>
+                  <li>ตรวจสอบโดยน้ำหนัก</li>
+                  <li>ข้าวเหนียว</li>
+                  <li>ข้าวเหลือง</li>
+                  <li>ข้าวท้องไข่</li>
+                  <li>ข้าวเสีย</li>
+                  <li>Milling Degree</li>
+                  <li>ข้าวเมล็ดลีบ</li>
+                  <li>ข้าวเมล็ดอ่อน</li>
+                </ul>
+              </div>
             </DialogContentText>
           </DialogContent>
           <DialogActions>
