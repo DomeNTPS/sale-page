@@ -152,13 +152,13 @@
         font-weight: normal;
         font-size: 18px;
         line-height: 32px;
-        width: 240px;
+        width: 255px;
         
     }
 
     .M0-detail-time {
         display: flex;
-        margin-top: 70px;
+        margin-top: 20px;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
@@ -170,7 +170,7 @@
     .M0-detail-acc {
         display: flex;
         justify-content: center;
-        margin-top: 70px;
+        margin-top: 20px;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
@@ -185,7 +185,7 @@
     }
 
     .M0-detail-price {
-        margin-top: 70px;
+        margin-top: 20px;
         display: flex;
         font-style: normal;
         font-weight: normal;

@@ -95,6 +95,11 @@
      color: #1A1B1F;
 }
 
+.detail-color-text {
+    color: #339A65;
+    font-size: 24px;
+}
+
 .detail-contactbutton {
     margin-top: 65px;
     margin-left: 100px;
@@ -192,6 +197,10 @@
         line-height: 22px;
 
         color: #1A1B1F;
+    }
+    .detail-color-text {
+        color: "#339A65";
+        font-size: 16px;
     }
     .detail-tab {
         display: flex;
