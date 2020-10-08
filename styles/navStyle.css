@@ -14,7 +14,6 @@
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
-
 }
 
 @media only screen and (max-width: 600px) {

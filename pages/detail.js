@@ -69,7 +69,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={2}>
+        <Box p={2} style={{padding: 0, marginTop: 10}}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -109,9 +109,11 @@ function detail() {
        },
      },
      root: {
-       //  flexGrow: 1,
        backgroundColor: "#fff",
      },
+     panel: {
+       padding: 0
+     }
    }));
 
    const classes = useStyles();
@@ -160,7 +162,7 @@ function detail() {
                   <ImgTab label="ตารางที่ 2" {...a11yProps(1)} />
                 </ImgTabs>
               </AppBar>
-              <TabPanel value={value} index={0}>
+              <TabPanel className={classes.panel} value={value} index={0}>
                 <img
                   src="/Table_1.png"
                   className="detail-img-responsive"

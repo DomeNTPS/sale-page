@@ -100,7 +100,8 @@
     .buy-container {
         display: flex;
         flex-direction: column;
-        height: 1200px;
+        height: auto;
+        padding-bottom: 40px;
     }
     .buy-head {
         display: flex;
