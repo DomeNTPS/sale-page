@@ -86,6 +86,7 @@
     font-size: 28px;
     line-height: 42px;
     justify-content: center;
+    padding-left: 120px;
 }
 
 .M0-button {
@@ -202,6 +203,7 @@
         font-size: 18px;
         line-height: 27px;
         justify-content: center;
+        padding-left: 77px;
     }
 
     .slide-contain {
