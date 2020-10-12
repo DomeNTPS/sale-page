@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navrespon: {
     background: "rgba(205, 227, 191, 1)",
-    color: "#fff",
+    color: "#339a65",
     borderRadius: 3,
     fontFamily: "Prompt",
     fontSize: 20,
@@ -72,22 +72,30 @@ function Navbar() {
           <ul className={click ? "ul-normal" : "ul-responsive"}>
             <li>
               <Link href="/">
-                <Button className={classes.navrespon}>หน้าแรก</Button>
+                <Button className={classes.navrespon} onClick={handleClick}>
+                  หน้าแรก
+                </Button>
               </Link>
             </li>
             <li>
               <Link href="/detail">
-                <Button className={classes.navrespon}>รายละเอียด</Button>
+                <Button className={classes.navrespon} onClick={handleClick}>
+                  รายละเอียด
+                </Button>
               </Link>
             </li>
             <li>
               <Link href="/buy">
-                <Button className={classes.navrespon}>ซื้อสินค้า</Button>
+                <Button className={classes.navrespon} onClick={handleClick}>
+                  ซื้อสินค้า
+                </Button>
               </Link>
             </li>
             <li>
               <Link href="/services">
-                <Button className={classes.navrespon}>บริการ</Button>
+                <Button className={classes.navrespon} onClick={handleClick}>
+                  บริการ
+                </Button>
               </Link>
             </li>
           </ul>

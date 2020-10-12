@@ -78,6 +78,7 @@ function DialogBuy({packagebuy, value}) {
       default:
         break;
     }
+    console.log(packagebuy)
   };
 
   const handleClose = () => {
@@ -112,7 +113,7 @@ function DialogBuy({packagebuy, value}) {
           <DialogTitle id="alert-dialog-title">{"Function"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              <div style={{ paddingLeft: 50 }}>
+              {/* <div style={{ paddingLeft: 50 }}> */}
                 <ul>
                   <li>ข้าวขาว เต็ม</li>
                   <li>ข้าวขาว ต้นข้าว</li>
@@ -123,7 +124,7 @@ function DialogBuy({packagebuy, value}) {
                   <li>ข้าวแกลบ</li>
                   <li>ข้าวเปลือก</li>
                 </ul>
-              </div>
+              {/* </div> */}
             </DialogContentText>
           </DialogContent>
           <DialogActions>
