@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "20px 30px",
   },
   navrespon: {
-    background: "rgba(205, 227, 191, 0.5)",
+    background: "rgba(205, 227, 191, 1)",
     color: "#fff",
     borderRadius: 3,
     fontFamily: "Prompt",
