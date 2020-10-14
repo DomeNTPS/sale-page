@@ -11,7 +11,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import { Label } from '@material-ui/icons';
 
-const fadeImages = ["/M0.png", "/M0.png"];
+const fadeImages = ["/Pic03_05.JPG", "/Pic03_02.JPG","/Pic03_08.JPG","/Pic03_04.JPG",];
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -45,30 +45,38 @@ export default function Home() {
             <div>
               <img src={fadeImages[0]} />
             </div>
-            {/* <p>M0 Series</p> */}
           </div>
           <div className="each-fade">
-            {/* <p>M0 series</p> */}
             <div>
               <img src={fadeImages[1]} />
+            </div>
+          </div>
+          <div className="each-fade">
+            <div>
+              <img src={fadeImages[2]} />
+            </div>
+          </div>
+          <div className="each-fade">
+            <div>
+              <img src={fadeImages[3]} />
             </div>
           </div>
         </Fade>
       </div>
       <div className="M0">
-          <div className="M0-head">M0 Series</div>
-          <div className="M0-detail">
-            เครื่องตรวจสอบคุณภาพข้าวด้วยเทคโนโลยีปัญญาประดิษฐ์ (AI)
-          </div>
-          <div className="M0-detail-time">ใช้เวลาตรวจสอบเพียง 1 นาที</div>
-          <div className="M0-detail-acc">แม่นยำถึง 93 %</div>
-          <div className="M0-detail-price">
-            ราคา&nbsp;&nbsp;<div style={{ color: "#339A65" }}>30,000</div>
-            &nbsp; บาท / ปี <br />
-          </div>
-          <div className="M0-detail-price-30000">
-            <div style={{ color: "#339A65" }}>60,000</div> &nbsp; บาทในปีแรก
-          </div>
+        <div className="M0-head">M0 Series</div>
+        <div className="M0-detail">
+          เครื่องตรวจสอบคุณภาพข้าวด้วยเทคโนโลยีปัญญาประดิษฐ์ (AI)
+        </div>
+        <div className="M0-detail-time">ใช้เวลาตรวจสอบเพียง 1 นาที</div>
+        <div className="M0-detail-acc">แม่นยำถึง 93 %</div>
+        <div className="M0-detail-price">
+          ราคา&nbsp;&nbsp;<div style={{ color: "#339A65" }}>30,000</div>
+          &nbsp; บาท / ปี <br />
+        </div>
+        <div className="M0-detail-price-30000">
+          <div style={{ color: "#339A65" }}>60,000</div> &nbsp; บาทในปีแรก
+        </div>
       </div>
       <div className="M0-button">
         <Link href="/buy">
